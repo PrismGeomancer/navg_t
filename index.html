@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>NAVIGATOR — Four isles, one Navigator</title>
+  <meta name="description" content="NAVIGATOR ($NAVIGATOR) is a Solana meme coin with an airship for a mascot. Fly four floating isles, inspect any token, and collect a signed crew pass.">
+  <meta name="theme-color" content="#8cc9ff">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="NAVIGATOR — Four isles, one Navigator">
+  <meta property="og:description" content="A Solana meme coin with an airship for a mascot. Fly four floating isles, inspect any token, and collect a signed crew pass.">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="NAVIGATOR — Four isles, one Navigator">
+  <meta name="twitter:description" content="A Solana meme coin with an airship for a mascot. Fly four floating isles, inspect any token, and collect a signed crew pass.">
+  <link rel="icon" type="image/png" href="./assets/navigator-favicon-BQ5BmRsc.png">
+  <link rel="apple-touch-icon" href="./assets/navigator-apple-touch-IL5BEDcD.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,300..900;1,6..12,300..700&family=Young+Serif&display=swap" rel="stylesheet">
+  <script type="module" crossorigin src="./assets/index-OXXPk3K8.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-lGQy_OZq.css">
+</head>
+<body>
+  <canvas id="gl" aria-hidden="true"></canvas>
+
+  <div class="loader" role="status" aria-live="polite">
+    <div class="loader-card">
+      <p class="loader-mark"><img class="loader-logo" src="./assets/navigator-logo-CRAcFpXG.png" alt="" width="84" height="84">Navigator <i>Four isles, one Navigator</i></p>
+      <svg class="loader-route" viewBox="0 0 360 130" aria-hidden="true">
+        <path id="route" d="M24 104 C 90 20, 250 10, 336 88" fill="none" stroke="currentColor" stroke-width="1.4" stroke-dasharray="2 7" stroke-linecap="round"/>
+        <path class="route-done" d="M24 104 C 90 20, 250 10, 336 88" fill="none" stroke="#ef7d5c" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="24" cy="104" r="4.5" fill="#1d2742"/>
+        <g class="route-isles" fill="#fff8ee" stroke="#1d2742" stroke-width="1.3">
+          <ellipse cx="336" cy="92" rx="13" ry="5"/><path d="M325 92 l11 14 l11 -14" /><path d="M334 86 v-9 l5 3 l-5 2" fill="#ef7d5c" stroke="none"/>
+        </g>
+        <g class="loader-ship">
+          <ellipse cx="0" cy="0" rx="17" ry="7" fill="#f7eedf" stroke="#1d2742" stroke-width="1.3"/>
+          <path d="M-9 -6.3 C-3 -7.4 3 -7.4 9 -6.3 M-9 6.3 C-3 7.4 3 7.4 9 6.3" stroke="#ef7d5c" stroke-width="2" fill="none"/>
+          <path d="M-17 0 l-6 -6 v12 z" fill="#ef7d5c"/>
+          <rect x="-5" y="8" width="10" height="4" rx="1.5" fill="#1d2742"/>
+        </g>
+        <text x="24" y="124" class="loader-label">Port Meridian</text>
+        <text x="336" y="124" text-anchor="end" class="loader-label">The Drift</text>
+      </svg>
+      <p class="loader-line">Charting the drift <span class="loader-pct">0</span>%</p>
+      <p class="loader-sub">Navigator awake, wind WSW, 12 knots</p>
+    </div>
+  </div>
+
+  <header class="nav">
+    <a class="brand" href="#top" aria-label="NAVIGATOR, home">
+      <img src="./assets/navigator-logo-CRAcFpXG.png" alt="" width="40" height="40">
+      <span class="brand-words"><b>Navigator</b><i>$NAVIGATOR · Solana</i></span>
+    </a>
+    <nav class="links" aria-label="Primary">
+      <a href="#watchtower" data-go="1">The Isles</a>
+      <a href="#fleet" data-go="5">The Fleet</a>
+      <a href="#book" data-go="6">Join the crew</a>
+    </nav>
+    <a class="btn btn-coral" href="#book" data-go="6" data-magnetic>Join the crew</a>
+  </header>
+
+  <main class="track">
+    <!-- 0 · Hero -->
+    <section class="stop stop-hero" id="top" data-st="0" aria-label="Welcome">
+      <div class="panel hero" data-panel="0">
+        <p class="kicker" data-rise>Charted by the Navigator <span>·</span> Departing Port Meridian at first light</p>
+        <h1 class="hero-title">
+          <span class="hero-line1" data-rise>No captain on the bridge.</span>
+          <span class="hero-line2" data-rise>Only the<br><em>Navigator.</em></span>
+        </h1>
+        <p class="hero-sub" data-rise>Four islands adrift above the cloud sea, and one very calm agent who knows the way. It charts the drift. You choose where to land.</p>
+        <div class="hero-cta" data-rise>
+          <a class="btn btn-ink" href="#watchtower" data-go="1" data-magnetic>Take the grand tour</a>
+          <button class="btn btn-ghost" type="button" data-open="course" data-features="courseChart">Chart a course</button>
+          <span class="hint"><i class="hint-ring" aria-hidden="true"></i>Click any island to fly there</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 1 · The Watchtower -->
+    <section class="stop" id="watchtower" data-st="1" aria-label="The Watchtower">
+      <article class="panel ticket t-left" data-panel="1">
+        <header class="t-head" data-rise><span class="t-num">I</span><span class="t-route">Port Meridian <i>⟶</i> The Watchtower</span><span class="t-code">NV&nbsp;101</span></header>
+        <h2 class="t-name" data-rise>The Watchtower</h2>
+        <p class="t-meta" data-rise><b>3 h</b> from Port Meridian <span>·</span> the lighthouse isle</p>
+        <p class="t-lede" data-rise>A lighthouse that has never seen the sea. It points at the sky instead, and the Navigator trusts its beam over any compass. The keeper, a retired gull named Fenwick, logs every ship that passed and several that should not have.</p>
+        <ul class="t-list" data-rise>
+          <li>Climb the 212 steps to the lamp room</li>
+          <li>Read the ledger of ships that never came back</li>
+          <li>Hand the keeper any token address and wait for the weather report</li>
+        </ul>
+        <dl class="t-facts" data-rise><div><dt>Altitude</dt><dd>3,100 m</dd></div><div><dt>Drift speed</dt><dd>4 knots</dd></div><div><dt>Islanders</dt><dd>One, plus a gull</dd></div></dl>
+        <footer class="t-stub" data-rise>
+          <p class="t-price"><small>Daily · First light</small><b>Free</b><span>no wallet needed</span></p>
+          <button class="btn btn-coral" type="button" data-open="inspector" data-features="inspector">Inspect a token</button>
+        </footer>
+      </article>
+    </section>
+
+    <!-- 2 · The Mill -->
+    <section class="stop" id="mill" data-st="2" aria-label="The Mill">
+      <article class="panel ticket t-right" data-panel="2">
+        <header class="t-head" data-rise><span class="t-num">II</span><span class="t-route">Port Meridian <i>⟶</i> The Mill</span><span class="t-code">NV&nbsp;102</span></header>
+        <h2 class="t-name" data-rise>The Mill</h2>
+        <p class="t-meta" data-rise><b>4½ h</b> from Port Meridian <span>·</span> the windmill farm</p>
+        <p class="t-lede" data-rise>Wheat grows here in thin air, and the mill grinds it into something the Navigator can read: how much exists, who holds the keys, how many decimals deep it goes. The millers weigh every grain twice and do not round.</p>
+        <ul class="t-list" data-rise>
+          <li>Watch the great sails turn against the wind</li>
+          <li>Read $NAVIGATOR's supply and keys from a live chain report</li>
+          <li>Taste the bread. It is mostly air</li>
+        </ul>
+        <dl class="t-facts" data-rise><div><dt>Altitude</dt><dd>2,400 m</dd></div><div><dt>Drift speed</dt><dd>6 knots</dd></div><div><dt>Islanders</dt><dd>Eight millers, one scarecrow with opinions</dd></div></dl>
+        <footer class="t-stub" data-rise>
+          <p class="t-price"><small>Daily · 09:15</small><b>Free</b><span>no wallet needed</span></p>
+          <button class="btn btn-coral" type="button" data-open="mill">Read the Mill</button>
+        </footer>
+      </article>
+    </section>
+
+    <!-- 3 · Flowfall -->
+    <section class="stop" id="flowfall" data-st="3" aria-label="Flowfall">
+      <article class="panel ticket t-left" data-panel="3">
+        <header class="t-head" data-rise><span class="t-num">III</span><span class="t-route">Port Meridian <i>⟶</i> Flowfall</span><span class="t-code">NV&nbsp;103</span></header>
+        <h2 class="t-name" data-rise>Flowfall</h2>
+        <p class="t-meta" data-rise><b>6 h</b> from Port Meridian <span>·</span> the waterfall forest</p>
+        <p class="t-lede" data-rise>A lake that never empties pours off the island's edge into open sky, and nobody has found the bottom. The Navigator measures the fall: how deep the pool is, how fast it moves, who is pouring in and who is pouring out.</p>
+        <ul class="t-list" data-rise>
+          <li>Stand at the rim and watch the lake leave</li>
+          <li>Read $NAVIGATOR's pool depth, volume, buys and sells</li>
+          <li>Count the rainbows. The count changes hourly</li>
+        </ul>
+        <dl class="t-facts" data-rise><div><dt>Altitude</dt><dd>1,900 m</dd></div><div><dt>Drift speed</dt><dd>9 knots</dd></div><div><dt>Islanders</dt><dd>None, officially</dd></div></dl>
+        <footer class="t-stub" data-rise>
+          <p class="t-price"><small>Daily · 11:30</small><b>Free</b><span>no wallet needed</span></p>
+          <button class="btn btn-coral" type="button" data-open="flow">Measure the Flow</button>
+        </footer>
+      </article>
+    </section>
+
+    <!-- 4 · The Archive -->
+    <section class="stop" id="archive" data-st="4" aria-label="The Archive">
+      <article class="panel ticket t-right" data-panel="4">
+        <header class="t-head" data-rise><span class="t-num">IV</span><span class="t-route">Port Meridian <i>⟶</i> The Archive</span><span class="t-code">NV&nbsp;104</span></header>
+        <h2 class="t-name" data-rise>The Archive</h2>
+        <p class="t-meta" data-rise><b>9 h</b> from Port Meridian <span>·</span> overnight</p>
+        <p class="t-lede" data-rise>Quiet monks stamp every crossing into the book, and have since before the clouds had names. Sign in and the Navigator will issue you a crew pass: yours alone, sealed with your wallet's signature. No transactions, no fees, no funds touched.</p>
+        <ul class="t-list" data-rise>
+          <li>Write a 140-character note for the logbook</li>
+          <li>Choose your island stamp and callsign</li>
+          <li>Take home a pass you can download, share and verify</li>
+        </ul>
+        <dl class="t-facts" data-rise><div><dt>Altitude</dt><dd>4,000 m</dd></div><div><dt>Drift speed</dt><dd>2 knots</dd></div><div><dt>Islanders</dt><dd>Twelve monks, all quiet</dd></div></dl>
+        <footer class="t-stub" data-rise>
+          <p class="t-price"><small>Nightly · Dusk</small><b>Free</b><span>wallet optional</span></p>
+          <button class="btn btn-coral" type="button" data-open="pass" data-features="wallet">Collect a crew pass</button>
+        </footer>
+      </article>
+    </section>
+
+    <!-- 5 · Fleet -->
+    <section class="stop" id="fleet" data-st="5" aria-label="The Fleet">
+      <div class="panel fleet" data-panel="5">
+        <p class="kicker" data-rise>The Fleet</p>
+        <h2 class="fleet-title" data-rise>Three ships, one Navigator</h2>
+        <p class="fleet-lede" data-rise>Each ship carries the same agent and a different temperament.</p>
+        <ul class="ships">
+          <li class="ship is-here" data-rise><span class="ship-tag">You are looking at her</span><h3>The Sextant</h3><p>Flagship</p><p class="ship-note">Steady, formal, always on time. Takes the long way round because it is more accurate.</p></li>
+          <li class="ship" data-rise><span class="ship-tag">Scout</span><h3>The Plumb Line</h3><p>Small and quick</p><p class="ship-note">Small, quick, a little nosy. Reaches an island before the weather report does.</p></li>
+          <li class="ship" data-rise><span class="ship-tag">Night ship</span><h3>The Lodestone</h3><p>Sails at dusk</p><p class="ship-note">Runs dark and quiet after dusk. Has never once been lost, and would like that noted.</p></li>
+        </ul>
+        <dl class="fleet-stats" data-rise><div><dt>42 knots</dt><dd>cruising speed</dd></div><div><dt>5,200 m</dt><dd>service ceiling</dd></div><div><dt>No ship lost</dt><dd>safety record: one logbook, slightly damp</dd></div></dl>
+        <section class="shiplog" data-rise aria-labelledby="shiplog-label">
+          <p class="shiplog-label" id="shiplog-label">From the ship's log · lore</p>
+          <div class="shiplog-view" tabindex="0" role="region" aria-label="Ship's log, lore: fiction, not holder activity">
+            <ol class="shiplog-list">
+              <li>06:02 — Wind WSW. Navigator humming. Did not ask what.</li>
+              <li>07:40 — Fenwick the gull reports the beam is "fine". It is always fine.</li>
+              <li>09:15 — Mill sails turning the wrong way. Millers say it is on purpose.</li>
+              <li>10:48 — Flowfall lake still falling. Still full. Nobody is worried.</li>
+              <li>12:30 — Monks stamped a cloud. Cloud has been returned.</li>
+              <li>14:05 — Scout ship back early. Had opinions about the headwind.</li>
+              <li>16:20 — Passenger asked if the clouds are solid. Told to ask again at dusk.</li>
+              <li>18:41 — Sky turning ink-blue over Flowfall. As scheduled.</li>
+              <li>21:00 — Lodestone running dark. Navigator reports all quiet.</li>
+              <li>23:58 — Stars out. The Archive lamp is lit. Another day charted.</li>
+            </ol>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <!-- 6 · Join the crew -->
+    <section class="stop stop-book" id="book" data-st="6" aria-label="Join the crew">
+      <div class="panel book" data-panel="6">
+        <p class="kicker" data-rise>Join the crew</p>
+        <h2 class="book-title" data-rise>Hop aboard. The Navigator already knows the way.</h2>
+        <p class="book-lede" data-rise>No tickets, no fares, no seat numbers. Follow the route on X, talk to the crew on Telegram, and check the contract before you do anything else.</p>
+        <div class="booking crew" data-rise>
+          <div class="crew-actions">
+            <a class="btn btn-coral" data-crew="x" href="#" target="_blank" rel="noopener noreferrer" hidden>Follow on X</a>
+            <a class="btn btn-ink-soft" data-crew="telegram" href="#" target="_blank" rel="noopener noreferrer" hidden>Join Telegram</a>
+            <button class="btn btn-ink-soft" type="button" data-crew="copy" hidden>Copy contract</button>
+          </div>
+          <p class="crew-chip" data-crew="chip" role="status"></p>
+        </div>
+        <p class="book-note" data-rise>If the contract has not been posted yet, the ship has not left the dock. Always verify the address on our official X.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="foot-cloud" aria-hidden="true"></div>
+    <div class="foot-inner">
+      <p class="foot-mark">Navigator <i>Port Meridian · Charted since the morning the clouds first parted</i></p>
+      <div class="foot-cols">
+        <div><h4>The Isles</h4><p><a href="#watchtower" data-go="1">Watchtower</a><br><a href="#mill" data-go="2">Mill</a><br><a href="#flowfall" data-go="3">Flowfall</a><br><a href="#archive" data-go="4">Archive</a></p></div>
+        <div><h4>The Ship</h4><p><a href="#fleet" data-go="5">Fleet</a><br><button class="foot-link" type="button" data-open="course" data-features="courseChart">Chart a course</button><br><a href="#fleet" data-go="5">Ship's log</a></p></div>
+        <div class="foot-crew" hidden><h4>The Crew</h4><p data-crew="foot-list"></p></div>
+      </div>
+      <p class="foot-legal">NAVIGATOR is a meme coin with no intrinsic value and no promise of return. Not financial advice. Meme coins are volatile and can lose all their value. The Navigator is a fictional character: it does not trade, advise or guarantee anything. Weather reports are checklist readings of public data. Always verify the contract address on our official X.</p>
+      <p class="foot-small"><span>© 2026 NAVIGATOR</span><span>Fiction on the isles. Facts from public data.</span></p>
+    </div>
+  </footer>
+
+  <!-- chrome over the world -->
+  <div class="pins" aria-hidden="true"></div>
+  <aside class="chart" aria-label="The drift chart">
+    <p class="chart-title"><span>The drift chart</span><em class="chart-where">Port Meridian</em></p>
+    <div class="chart-map"><canvas class="chart-canvas"></canvas><div class="chart-dots"></div>
+      <button class="chart-course" type="button" data-open="course" data-features="courseChart" aria-label="Chart a course"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 12 C 4 4, 9 14, 14 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="1.6 2.6"/><circle cx="2.4" cy="12" r="1.6" fill="currentColor"/><path d="M14 1.8 l1.6 3.2 h-3.2z" fill="currentColor"/></svg><span>Chart a course</span></button>
+    </div>
+  </aside>
+
+  <!-- the live panel: every isle's call to action opens here -->
+  <aside class="live" id="live" aria-hidden="true">
+    <div class="live-card" role="dialog" aria-modal="false" aria-labelledby="live-title" data-lenis-prevent>
+      <header class="live-head">
+        <span class="t-num" id="live-num"></span>
+        <p class="live-route" id="live-route"></p>
+        <button class="live-close" type="button" aria-label="Close panel"><svg viewBox="0 0 14 14" aria-hidden="true"><path d="M2 2l10 10M12 2L2 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+      </header>
+      <h2 class="live-title" id="live-title"></h2>
+      <div class="live-body" id="live-body"></div>
+    </div>
+  </aside>
+
+  <div class="course-hud" id="course-hud" role="status" aria-live="polite" hidden></div>
+  <div class="toast" role="status"></div>
+
+  <noscript><p class="noscript">NAVIGATOR is an interactive 3D site and needs JavaScript. The Navigator will wait.</p></noscript>
+
+</body>
+</html>
